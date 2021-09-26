@@ -1,4 +1,6 @@
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -35,6 +37,33 @@ class Rose extends JFrame{
         b.setSize(400,20);
         b.setLocation(300,320);
 
+        b.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		
+        		if(e.getSource() == b) {
+        			
+        			String text = cfield.getText().toLowerCase();
+        			carea.setForeground(Color.GREEN);
+        			
+        			carea.append("You: "+text+"\n");
+        			cfield.setText("");
+        			
+        			if(text.contains("hi")) {
+        				replyMethod("Hello there!");
+        			}
+        			else if(text.contains("how are you")) {
+        				replyMethod("I'm a bot, I don't have feelings but if I did I suppose I would be 'good'.");
+        			}
+        			else
+        				replyMethod("I don't know what you said, sorry.");
+        		}
+        		        		
+        	}
+        });
+        
+    }
+    public void replyMethod(String s) {
+    	carea.append("Rose: "+s+"\n");
     }
 
 }
