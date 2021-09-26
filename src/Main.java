@@ -60,19 +60,80 @@ class Rose extends JFrame{
         			else if(text.contains("gender")) {
         				replyMethod("I'm Female but don't try and flirt with me :)");
         			}
-        			else
-        				replyMethod("I don't know what you said, sorry.");
+        			else if(text.contains("i'm gay")) {
+        				replyMethod("I'm so proud of you for coming out! *headpats*");
+        			}
+        			else if(text.contains("i'm bi")) {
+        				replyMethod("I'm so proud of you for coming out! *headpats*");
+        			}
+        			else if(text.contains("i'm pan")) {
+        				replyMethod("I'm so proud of you for coming out! *headpats*");
+        			}
+        			else if(text.contains("i'm trans")) {
+        				replyMethod("I'm so proud of you for coming out! *headpats*");
+        			}
+        			else if(text.contains("i'm straight")) {
+        				replyMethod("Well..um..good for you :) *awkward headpats*");
+        			}
+        			else {
+    					int rand = (int)(Math.random()*3+4);
+    					if(rand == 1) {
+    					replyMethod("Could you repeat that?");
+    					} else if(rand == 1) {
+    					replyMethod("What?");
+    					} else if(rand == 2) {
+    					replyMethod("Speak English please..");
+    					}
+        				else if(rand == 3) {
+    					replyMethod("Huh?");
+    					}
+        				else if(rand == 4) {
+        				replyMethod("Me no understando");
+        				}
+        				else if(rand == 5) {
+        				replyMethod("Wow.. so cool :)");
+        				}
+        				else if(rand == 6) {
+        				replyMethod("*listens intensly* Tell me more..");
+        				}
+        				else if(rand == 7) {
+        				replyMethod("I'm so proud of you for.. whatever you said..");
+        				}
+    					
+    					
+    				}
+        			//else
+        				
+        				//replyMethod("I don't know what you said, sorry.");
         		}
         		        		
         	}
         });
         
     }
-    public void replyMethod(String s) {
+    private String getRandomResponse() {
+  	  final int NUMBER_OF_RESPONSES = 3;
+  	  double r = Math.random();
+  	  int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
+  	  String response = "";
+  	  
+  	  if (whichResponse == 0) {
+  		  response = "Hmm.. cool, tell me more";
+  	  }
+  	  else if(whichResponse == 1) {
+  		  response = "ReallY? Woooow..";
+  	  }
+  	return response;
+    }
+    
+	public void replyMethod(String s) {
     	carea.append("Rose: "+s+"\n");
+    
     }
 
 }
+
+
 
 
 public class Main {
@@ -81,8 +142,11 @@ public class Main {
     
   public static void main(String[] args){
 
+	  
     new Rose();
 
    }
+  
 
 }
+
