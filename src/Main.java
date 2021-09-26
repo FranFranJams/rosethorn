@@ -31,6 +31,7 @@ class Rose extends JFrame{
         cfield.setLocation(1,320);
         f.add(b);
         b.add(label);
+        label.setText("Send");
         b.setSize(400,20);
         b.setLocation(300,320);
 
