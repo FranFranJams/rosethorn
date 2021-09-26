@@ -75,6 +75,15 @@ class Rose extends JFrame{
         			else if(text.contains("i'm straight")) {
         				replyMethod("Well..um..good for you :) *awkward headpats*");
         			}
+        			else if(text.contains("football")) {
+        				replyMethod("That's.. cool\nI don't really like football :)");
+        			}
+        			else if(text.contains("dog")){
+        				replyMethod("I like dogs too :3");
+        			}
+        			else if(text.contains("cat")) {
+        				replyMethod("I also like cats :3");
+        			}
         			else {
     					int rand = (int)(Math.random()*3+4);
     					if(rand == 1) {
@@ -99,7 +108,6 @@ class Rose extends JFrame{
         				else if(rand == 7) {
         				replyMethod("I'm so proud of you for.. whatever you said..");
         				}
-    					
     					
     				}
         			//else
