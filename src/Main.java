@@ -52,7 +52,13 @@ class Rose extends JFrame{
         				replyMethod("Hello there!");
         			}
         			else if(text.contains("how are you")) {
-        				replyMethod("I'm a bot, I don't have feelings but if I did I suppose I would be 'good'.");
+        				replyMethod("I'm a bot, I don't have feelings,\nbut if I did I suppose I would be 'good'.");
+        			}
+        			else if(text.contains("name")) {
+        				replyMethod("My name is Rose :D");
+        			}
+        			else if(text.contains("gender")) {
+        				replyMethod("I'm Female but don't try and flirt with me :)");
         			}
         			else
         				replyMethod("I don't know what you said, sorry.");
