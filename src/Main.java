@@ -20,7 +20,7 @@ class Rose extends JFrame{
         f.setResizable(false);
         f.setLayout(null);
         f.setSize(400,400);
-        f.getContentPane().setBackground(Color.MAGENTA);
+        f.getContentPane().setBackground(new Color(75,0,130));
         f.setTitle("Rosethorn");
         f.add(carea);
         f.add(cfield);
@@ -39,7 +39,7 @@ class Rose extends JFrame{
 }
 
 
-public class Rosethorn {
+public class Main {
     
 
     
